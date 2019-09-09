@@ -1,14 +1,10 @@
 x = 0:0.01:15*pi;
 
-x1=3*x+7;
-log5x1=log(x1)/log(5);
+log5 = @(x) log(x) / log(5);
+log6 = @(x) log(x) / log(6);
 
-a = 12*log5x1;
-
-x2 = 2*x+46;
-log6x2 = log(x2)/log(6);
-
-b = sin(4*(log2(x+8))) + cos(5*(log6x2));
+a = 12*log5(3*x+7);
+b = sin(4*(log2(x+8))) + cos(5*(log6(2*x+46)));
 
 figure(1)
 
