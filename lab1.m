@@ -1,0 +1,55 @@
+x = 0:0.01:15*pi;
+
+x1=3*x+7;
+log5x1=log(x1)/log(5);
+
+a = 12*log5x1;
+
+x2 = 2*x+46;
+log6x2 = log(x2)/log(6);
+
+b = sin(4*(log2(x+8))) + cos(5*(log6x2));
+
+figure(1)
+
+plot(x,a,'r *')
+title('Funcion a')
+xlabel('x')
+ylabel('a')
+
+figure(2)
+
+plot(x,b,'g +')
+title('Funcion b')
+xlabel('x')
+ylabel('b')
+
+figure(3)
+
+plot(x,a,'r *',x,b,'g +')
+legend('Funcion a', 'Funcion b')
+title('Funcion a y b')
+xlabel('x')
+
+y = -10:0.05:10;
+c = 7*exp(y+12);
+
+figure(4)
+plot(y,c)
+title('Funcion exponencial c')
+xlabel('x')
+ylabel('c')
+
+grid
+
+figure(5)
+semilogy(y,c)
+title('Funcion exponencial c escala logaritmica')
+xlabel('x')
+ylabel('c')
+grid
+
+
+
+
+
