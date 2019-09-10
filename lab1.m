@@ -45,7 +45,9 @@ xlabel('x')
 ylabel('c')
 grid
 
+syms x
 
-
+fx = x^2;
+y = newton(fx,2,10000000);
 
 
