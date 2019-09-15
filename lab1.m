@@ -61,7 +61,7 @@
 
 syms x
 
-prompt = 'Ingrese el vector que representa el polinomio ';
+prompt = 'Ingrese el vector que representa el polinomio entre corchetes: ';
 
 polinomio = [];
 
