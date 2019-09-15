@@ -71,9 +71,16 @@ catch
     disp('El vector ingresado no es valido')
 end
 
+prompt = 'Ingrese el numero de iteraciones: ';
+iter = 0;
 
+try
+    iter = input(prompt);
+catch
+    disp('El numero ingresado no es valido')
+end
 
 fx = polinomio
-raiz = newton(fx,2,5000)
+raiz = newton(fx,2,iter)
 
 
