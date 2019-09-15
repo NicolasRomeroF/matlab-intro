@@ -6,10 +6,10 @@ disp("iteracion:");
 disp(iterations);
 
 fx0=polyval(fx,x0);
-df=polyder(fx);
-dfx0=polyval(df,x0);
+df=diff(fx);
+dfx0=vpa(subs(df,x,x0));
 xk = x0-fx0/dfx0;
-fxk=polyval(fx,xk);
+fxk=subs(fx,xk);
 
 
 disp("xk:");
