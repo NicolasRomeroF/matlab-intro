@@ -47,7 +47,7 @@ grid
 
 syms x
 
-fx = x^2;
-y = newton(fx,2,10000000);
+fx = x^2 +2*x + 1;
+y = newton(fx,2,10000000)
 
 
