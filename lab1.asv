@@ -107,7 +107,7 @@ end
 
 prompt = 'Ingrese el error mínimo: ';
 error = 0;
-% Se solicita por consola el error mínimo aceptable para el método de newton-
+% Se solicita por consola el punto inicial para el método de newton-
 % raphson
 try
     error = input(prompt);
@@ -115,8 +115,6 @@ catch
     disp('El numero ingresado no es valido')
 end
 
-
-% Cálculo del cero del polinomio
 fx = polinomio
 raiz = newton(fx,x0,iter,error)
 
