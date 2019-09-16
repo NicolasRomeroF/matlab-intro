@@ -1,4 +1,4 @@
-function xk = newton (fx,x0,iterations)
+function xk = newton (fx,x0,iterations,error)
 syms x
 disp("X0:");
 disp(x0)
@@ -14,8 +14,8 @@ fxk=polyval(fx,xk);
 
 disp("xk:");
 disp(xk);
-if(fxk<0.0000001 || iterations==0)
+if(fxk<error || iterations==0)
     return;
 else
-    xk = newton(fx,xk,iterations-1);    
+    xk = newton(fx,xk,iterations-1,error);    
 end

@@ -71,6 +71,15 @@ catch
     disp('El vector ingresado no es valido')
 end
 
+prompt = 'Ingrese el punto inicial: ';
+x0 = 0;
+
+try
+    x0 = input(prompt);
+catch
+    disp('El numero ingresado no es valido')
+end
+
 prompt = 'Ingrese el numero de iteraciones: ';
 iter = 0;
 
@@ -80,7 +89,16 @@ catch
     disp('El numero ingresado no es valido')
 end
 
+prompt = 'Ingrese el error mínimo: ';
+error = 0;
+
+try
+    error = input(prompt);
+catch
+    disp('El numero ingresado no es valido')
+end
+
 fx = polinomio
-raiz = newton(fx,2,iter)
+raiz = newton(fx,x0,iter,error)
 
 
